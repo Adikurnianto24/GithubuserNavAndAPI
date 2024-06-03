@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">GithubuserNavAndAPI</string>
+    <string name="searchbar_hint">Masukkan kata</string>
+    <string name="menu_1">Menu 1</string>
+    <string name="title">Github User\'s</string>
+    <string name="waiting">Waiting to Search !</string>
+    <string name="usernameTv">username</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="share">Share</string>
+    <string name="followTl">Following and Follower</string>
+    <string name="followVp">Following and Follower</string>
+    <string name="Tvfollower">Followers</string>
+    <string name="Tvfollowing">Following</string>
+    <string name="Button">Show Button</string>
+    <string name="Back">Back</string>
+    <string name="userIv">UserImage</string>
+    <string name="follower_count">%d Followers</string>
+    <string name="following_count">%d Following</string>
+    <string name="tab_1">Followers</string>
+    <string name="tab_2">Following</string>
+    <string name="SettingTitle">Settings</string>
+    <string name="ChangeMode">Change Mode</string>
+    <string name="settingIC">Setting</string>
+    <string name="search">              Search and input username</string>
+    <string name="title_detail">       Details User\'s</string>
+    <string name="empty_data_description"> Data Not Found</string>
+    <string name="Favoritetitle"> List Favorite</string>
+
+</resources>

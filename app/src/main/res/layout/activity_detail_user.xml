@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailUser"
+    android:fillViewport="true"
+    android:background="@drawable/background_detail">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/appBarLayout"
+            layout="@layout/app_bar_layout" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userCiv"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="595dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/Accent"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/userCiv"
+            app:layout_constraintStart_toStartOf="@+id/userCiv"
+            app:layout_constraintTop_toBottomOf="@+id/userCiv"
+            tools:text="@string/usernameTv" />
+
+        <TextView
+            android:id="@+id/usernameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/Accent"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/nameTv"
+            app:layout_constraintStart_toStartOf="@+id/nameTv"
+            app:layout_constraintTop_toBottomOf="@+id/nameTv"
+            tools:text="name" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/usernameTv"
+            app:layout_constraintStart_toStartOf="@+id/usernameTv"
+            app:layout_constraintTop_toBottomOf="@+id/usernameTv">
+
+            <TextView
+                android:id="@+id/followersTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:drawablePadding="6dp"
+                android:textColor="@color/Accent"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/people_profile"
+                tools:text="@string/Tvfollower" />
+
+            <TextView
+                android:id="@+id/followingTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:drawablePadding="6dp"
+                android:textColor="@color/Accent"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/people_profile"
+                tools:text="@string/Tvfollowing" />
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/followTl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:tabIndicatorColor="@color/Accent"
+            app:tabTextColor="@color/Accent" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/followVp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15" />
+
+        <ToggleButton
+            android:id="@+id/favorite_toggle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:layout_marginTop="112dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/togglefav"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
